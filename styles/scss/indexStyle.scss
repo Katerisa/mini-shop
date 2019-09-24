@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'Gabriela';
+    src: url('../fonts/Gabriela-Regular.ttf');
+}
+@font-face {
+    font-family: 'Bad-Script';
+    src: url('../fonts/BadScript-Regular.ttf')
+}
+$light-color: rgb(251, 242, 235);
+$dark-color: rgb(53, 42, 59);
+body, html {
+    margin: 0;
+    padding: 0;    
+    height: 100%;
+}
+footer, header {
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(45deg, $light-color, $dark-color);
+}
+.headerInside, .mainTextWrap, .shopContent, .footerContent, .openedProduct {
+    width: 1100px;
+    margin: 0 auto;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+header {
+    .logo {
+        float: left;
+        font-family: 'Gabriela', sans-serif;
+        margin-left: 20px;
+        width: 100px;
+        font-size: 22px;
+        height: 70px;
+        line-height: 70px;
+    }
+    .navWrap {
+        width: 200px;
+        display: flex;
+        flex-direction: row;
+        float: right;
+        height: 70px;
+        margin-right: 20px; 
+        a {
+            text-decoration: none;
+            display: block;
+            padding: 0 20px;
+            height: 70px;
+            line-height: 70px;
+            font-family: 'Bad-Script', arial;
+            font-size: 20px;
+            color: #fff;
+        }
+        a:hover {
+            background-color: rgba(251, 242, 235, 0.1);
+        }
+    }    
+}
+main {
+    width: 100%;
+    color: $dark-color;
+    flex: 1 0 auto;
+    .promo {
+        width: 100%;
+        height: 400px;
+        background: url('../images/phones2.jpg') no-repeat;
+        background-size: cover;
+    }
+    .promoText {
+        padding-top: 20px;
+        text-align: center;
+        margin: 0;
+    }
+    .shopItems {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .shopUnit {
+        width: 308px;
+        height: 320px;
+        background-color: #F1EFF3;
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+    .shopUnit img {
+        width: 308px;
+        height: 231px;
+        object-fit: cover;        
+    }
+    .shopUnitShortDesc {
+        height: 20px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;  
+    }
+    .openedProduct {
+        padding-top: 20px;
+        .openedProductImg {
+            float: left;
+            max-width: 30%;
+        }
+        .openedProductContent {
+            float: left;
+            max-width: 70%;
+        }
+    }
+
+}
+footer { 
+    flex: 0 0 auto;
+    .footerContent {
+        line-height: 70px;
+    }   
+}
+@media screen and (max-width: 1000px) {
+    .headerInside, .mainTextWrap, .shopContent, .footerContent, .openedProduct {
+        width: 90vw;
+        margin: 0 auto;
+    }
+}
